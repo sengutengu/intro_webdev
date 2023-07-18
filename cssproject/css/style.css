@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    background-color: #efefef;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.grid {
+    display: grid;
+    column-gap:20px;
+    grid-template-areas:
+        "head"
+        "body"
+        "foot";
+}
+
+/* ================== Header ================== */
+
+.header {
+    grid-area:head;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #43281c;
+    color: #fbf2c0;
+    font-weight: normal;
+}
+
+.logo {
+    height:25px;
+    position: relative;
+    margin-right:5px;
+}
+
+/* ================== Body ==================== */
+
+.main-content {
+    grid-area: body;
+    display: grid;
+    column-gap: 20px;
+    padding: 30px 15px;
+    grid-template-areas:
+        "left-column right-column";
+    grid-template-columns: 1fr 1fr;
+}
+
+.card {
+    background-color: #f0dbc7;
+    border-radius: 5px;
+    box-shadow: 0 5px 3px rgb(0 0 0 / 0.2);
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex; /* govern text inside */
+    align-items: start; /* center-align vertically */
+    justify-content: left; /* justify left */
+    flex-direction:column;
+}
+
+.card-title {
+    color:#915216;
+    text-transform:uppercase;
+    display:flex;
+    justify-content:left;
+}
+
+/* ============== Order Items Card =============== */
+
+.items-container {
+    grid-area: left-column;
+}
+
+.order-items {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    gap: 15px;
+    padding:15px 20px 20px 15px;
+
+}
+
+.order-item {
+    width: 100%;
+    display:grid;
+    grid-template-areas:
+        "left center right"
+        ". bottom .";
+    grid-template-columns: 1fr 3fr 1fr; 
+    border-style: none none solid none;
+    border-width: 2px;
+    border-color:#79420b;
+    padding-bottom: 15px;
+}
+
+.order-item:last-child {
+    border-style: none;
+    padding-bottom: none;
+}
+
+.item-count {
+    grid-area: left;
+}
+
+.item-name {
+    grid-area: center;
+    font-weight:bold;
+}
+
+.item-price {
+    grid-area: right;
+    font-weight: bold;
+    display:flex;
+    justify-content: right;
+}
+
+.item-desc {
+    grid-area: bottom;
+    font-weight: light;
+    color:#915216;
+    font-size: small;
+    text-transform:uppercase;
+}
+
+/* ============== Name & Payment Cards ================== */
+
+.name-payment-container {
+    display: flex;
+    flex-direction: column;
+    grid-area: right-column;
+}
+
+
+.custom-input-group {
+    position:relative;
+    display:inline-block;
+    margin:15px 0px;
+    width:100%;
+}
+.custom-input {
+    border-color: #915216;
+    background-color: #f0dbc7;
+    padding:8px;
+    border-radius:20px;
+}
+.custom-input-label {
+    background-color: #f0dbc7;
+    color:#915216;
+    font-size:11px;
+    position:absolute;
+    left:25px;
+    top:-7px;
+    padding:0 2px;
+    text-transform:uppercase;
+}
+
+.custom-input-group.full-length .custom-input {
+    width:100%;
+}
+
+/* ============ Receipt & Order Button ============== */
+
+.receipt-order-container {
+    grid-area: foot;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.total {
+    text-align:left;
+    width: 300px;
+    margin-bottom:50px;
+    color: #292827;
+}
+
+.total td:last-child {
+    text-align:right;
+}
+
+.total tr:last-child td {
+    font-weight:bold;
+    height:40px;
+    vertical-align:bottom;
+}
+
+.order-button {
+    width: 95%;
+    border: none;
+    background-color: #deb993;
+    height: 50px;
+    border-radius: 25px;
+    font-size:large;
+    color: #292827;
+}

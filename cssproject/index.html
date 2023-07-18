@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <title>Coffee Masters</title>
+</head>
+<body>    
+    <div class="grid">
+        <div class="header"><img class="logo" src="assets/coffee_masters_logo.png" alt="Coffee Master Logo">Coffee Masters</div>
+        <div class="main-content">
+            <div class="items-container">
+                <div class="card order-items">
+                    <div class="card-title">Items</div>
+                    <div class="order-item">
+                        <div class="item-count">1x</div>
+                        <div class="item-name">Cappuccino</div>
+                        <div class="item-desc">Lite foam</div>
+                        <div class="item-price">$3.35</div>  
+                    </div>
+                    <div class="order-item">
+                        <div class="item-count">1x</div>
+                        <div class="item-name">Cappuccino</div>
+                        <div class="item-desc">Lite milk <br> Double espresso</div>
+                        <div class="item-price">$3.85</div>  
+                    </div>
+                    <div class="order-item">
+                        <div class="item-count">1x</div>
+                        <div class="item-name">Croissant</div>
+                        <div class="item-desc">Butter</div>
+                        <div class="item-price">$2.45</div>  
+                    </div>
+                </div>
+            </div>
+            <div class="name-payment-container">
+                <div class="card">
+                    <div class="card-title">Name</div>
+                    <div class="custom-input-group full-length">
+                        <label for="customer-name" class="custom-input-label">Name for order</label>
+                        <input id="cusomter-name" class="custom-input"/>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Payment</div>
+                    <div class="custom-input-group full-length">
+                        <label for="card-number" class="custom-input-label">Card number</label>
+                        <input id="card-number" class="custom-input"/>
+                    </div>
+                    <div class="custom-input-group">
+                        <label for="ccv-code" class="custom-input-label">CCV</label>
+                        <input id="ccv-code" class="custom-input"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="receipt-order-container">
+            <table class="total">
+                <tbody>
+                    <tr>
+                        <td class="tg-0lax">Subtotal:</td>
+                        <td class="tg-0lax">$9.65</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0lax">Tax:</td>
+                        <td class="tg-0lax">$0.82</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-1wig">Total:</td>
+                        <td class="tg-1wig">$10.47</td>
+                    </tr>
+                </tbody>
+                </table>
+            <button class="order-button">Place order</button>
+        </div>
+    </div>
+    
+</body>
+</html>
